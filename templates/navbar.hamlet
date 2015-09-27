@@ -1,0 +1,47 @@
+<div #navbar>
+  <ul>
+    <li .title>ZONE
+    $if czone == Nothing
+      <li .selected>Summary
+    $else
+      <li>
+        <a href=@{HomeR}>Summary
+    $if null zones
+      <li .error>There are no known zones, something is wrong.
+    $else
+      $forall zone <- zones
+        $case czone
+          $of Nothing
+            <li>
+              <a href=@{ZoneR zone}>#{show zone}
+          $of Just szone
+            $if zone == szone
+              <li .selected>#{show zone}
+            $else
+              <li>
+                <a href=@{ZoneR zone}>#{show zone}
+  <ul>
+    $case czone
+      $of Nothing
+        <li>&nbsp;
+      $of Just szone
+        <li .title>BAT
+        $if cbat == Nothing
+          <li .selected>Summary
+        $else
+          <li>
+            <a href=@{ZoneR szone}>Summary
+        $if null bats
+          <li .error>There are no known BATs, something is wrong.
+        $else
+          $forall bat <- bats
+            $case cbat
+              $of Nothing
+                <li>
+                  <a href=@{BatR szone bat}>#{show bat}
+              $of Just sbat
+                $if bat == sbat
+                  <li .selected>#{show bat}
+                $else
+                  <li>
+                    <a href=@{BatR szone bat}>#{show bat}
