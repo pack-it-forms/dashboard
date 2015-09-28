@@ -18,6 +18,7 @@ getSummaryR = do
     let czone = Nothing :: Maybe Integer
         cbat = Nothing :: Maybe Integer
         navbar = $(widgetFile "navbar")
+        map = mapW "zoneMap" (-122.09847, 37.36513, 13)
     $(widgetFile "summary")
 
 
@@ -43,3 +44,12 @@ getBatR zone bat = do
         navbar = $(widgetFile "navbar")
     $(widgetFile "bat")
 
+type Longitude = Double
+type Lattitude = Double
+type MapZoom = Integer
+
+mapW :: String -> (Longitude, Lattitude, MapZoom) -> Widget
+mapW mapId (longitude, lattitude, zoom) = do
+  addStylesheetRemote "http://openlayers.org/en/v3.9.0/css/ol.css"
+  addScriptRemote "http://openlayers.org/en/v3.9.0/build/ol.js"
+  $(widgetFile "map")

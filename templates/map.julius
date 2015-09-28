@@ -1,0 +1,21 @@
+
+
+var map = new ol.Map({
+  target: #{toJSON mapId},
+  layers: [
+    new ol.layer.Tile({
+      source: new ol.source.MapQuest({layer: 'osm'})
+    }),
+    new ol.layer.Vector({
+      source: new ol.source.Vector({
+        url: '/static/map-data/zones.kml',
+        format: new ol.format.KML()
+      })
+    })
+  ],
+  controls: [],
+  view: new ol.View({
+    center: ol.proj.transform([#{toJSON longitude}, #{toJSON lattitude}], 'EPSG:4326', 'EPSG:3857'),
+    zoom: #{toJSON zoom},
+  })
+});
