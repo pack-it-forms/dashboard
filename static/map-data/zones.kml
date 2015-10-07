@@ -46,7 +46,7 @@
 		</Placemark>
 		<Placemark>
 			<styleUrl>#poly-7C3592-2-2</styleUrl>
-			<name>Zone 5</name>
+			<name>Zone 5</name>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -60,7 +60,7 @@
 		</Placemark>
 		<Placemark>
 			<styleUrl>#poly-009D57-4-2</styleUrl>
-			<name>Zone 6</name>
+			<name>Zone 6</name>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -74,7 +74,7 @@
 		</Placemark>
 		<Placemark>
 			<styleUrl>#poly-F4EB37-4-2</styleUrl>
-			<name>Zone  7</name>
+			<name>Zone 7</name>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -88,7 +88,7 @@
 		</Placemark>
 		<Placemark>
 			<styleUrl>#poly-4186F0-4-2</styleUrl>
-			<name>Zone 8</name>
+			<name>Zone 8</name>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -116,7 +116,7 @@
 		</Placemark>
 		<Placemark>
 			<styleUrl>#poly-009D57-4-2</styleUrl>
-			<name>Zone 11</name>
+			<name>Zone 11</name>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -245,4 +245,4 @@
 			</PolyStyle>
 		</Style>
 	</Document>
-</kml>
+</kml>
