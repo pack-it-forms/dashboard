@@ -11,8 +11,8 @@ watcher d = FN.withManager  $ \mgr -> do
 
 getSummaryR :: Handler Html
 getSummaryR = do
-  let zones = [1..11]
-      bats = []
+  let zones = [1..11] :: [Integer]
+      bats = [] :: [Integer]
   defaultLayout $ do
     setTitle "Los Altos Damage Status - Summary"
     let czone = Nothing :: Maybe Integer
@@ -24,8 +24,8 @@ getSummaryR = do
 
 getZoneR :: Integer -> Handler Html
 getZoneR zone = do
-  let zones = [1..11]
-      bats = [118..131]
+  let zones = [1..11] :: [Integer]
+      bats = [100..110] :: [Integer]
   defaultLayout $ do
     setTitle $ "Los Altos Damage Status - Zone " ++ (toHtml zone)
     let czone  = Just zone
@@ -35,8 +35,8 @@ getZoneR zone = do
 
 getBatR :: Integer -> Integer -> Handler Html
 getBatR zone bat = do
-  let zones = [1..11]
-      bats = [118..131]
+  let zones = [1..11] :: [Integer]
+      bats = [100..110] :: [Integer]
   defaultLayout $ do
     setTitle $ "Los Altos Damage Status - BAT " ++ (toHtml bat)
     let czone = Just zone
