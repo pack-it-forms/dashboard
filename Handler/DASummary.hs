@@ -5,13 +5,15 @@ module Handler.DASummary where
 import Import
 import PackItForms.MsgFmt as MF
 import System.FSNotify as FN
+import qualified PackItForms.LADamage as LAD
 
 watcher d = FN.withManager  $ \mgr -> do
             FN.watchDir mgr d (const True) print
 
 getSummaryR :: Handler Html
 getSummaryR = do
-  let zones = [1..11] :: [Integer]
+  App {..} <- getYesod
+  let zones = LAD.zones zoneMapping
       bats = [] :: [Integer]
   defaultLayout $ do
     setTitle "Los Altos Damage Status - Summary"
@@ -24,8 +26,9 @@ getSummaryR = do
 
 getZoneR :: Integer -> Handler Html
 getZoneR zone = do
-  let zones = [1..11] :: [Integer]
-      bats = [100..110] :: [Integer]
+  App {..} <- getYesod
+  let zones = LAD.zones zoneMapping
+      bats = fromMaybe [] $ LAD.batsOfZone zoneMapping zone
   defaultLayout $ do
     setTitle $ "Los Altos Damage Status - Zone " ++ (toHtml zone)
     let czone  = Just zone
@@ -35,8 +38,9 @@ getZoneR zone = do
 
 getBatR :: Integer -> Integer -> Handler Html
 getBatR zone bat = do
-  let zones = [1..11] :: [Integer]
-      bats = [100..110] :: [Integer]
+  App {..} <- getYesod
+  let zones = LAD.zones zoneMapping
+      bats = fromMaybe [] $ LAD.batsOfZone zoneMapping zone
   defaultLayout $ do
     setTitle $ "Los Altos Damage Status - BAT " ++ (toHtml bat)
     let czone = Just zone
