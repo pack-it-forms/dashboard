@@ -1,0 +1,4 @@
+div#batMap
+  width: 800px
+  height: 900px
+  opacity: 1

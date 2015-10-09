@@ -1,2 +1,5 @@
 ^{navbar}
-^{map}
+<div #content>
+  ^{areamap}
+  <div #zone-summaries>
+   ^{summaries}

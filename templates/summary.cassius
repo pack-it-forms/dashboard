@@ -1,4 +1,10 @@
-div#zoneMap
+div#cityMap
   width: 800px
   height: 900px
-  opacity: 0.8
+  opacity: 1
+
+div#content
+  width: 1200px
+  margin: 0 auto
+  position: relative
+

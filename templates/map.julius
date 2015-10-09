@@ -1,17 +1,62 @@
+var map_layer = new ol.layer.Tile({
+  source: new ol.source.MapQuest({layer: 'osm'}),
+});
 
+var clip_layer = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: #{toJSON clip_source_kml},
+    format: new ol.format.KML()
+  })
+});
+clip_layer.once("change", function () {
+  var used_feature_names = #{toJSON clip_source_features};
+  var source = clip_layer.getSource();
+  var unused_features = [];
+  source.forEachFeature(function (f) {
+    if (used_feature_names.length > 0) {
+      if (used_feature_names.indexOf(f.get('name')) == -1) {
+        unused_features.push(f);
+      }
+    }
+    f.setStyle(areaStatusStyle["unknown"]);
+  });
+  unused_features.forEach(function (f) {
+    source.removeFeature(f);
+  });
+  zoomToClip();
+});
+
+
+var areas_layer = new ol.layer.Vector({
+  source: new ol.source.Vector({
+    url: #{toJSON areas_source_kml},
+    format: new ol.format.KML()
+  }),
+  opacity: 0.55
+});
+areas_layer.once("change", function () {
+  var used_feature_names = #{toJSON areas_source_features};
+  var source = areas_layer.getSource();
+  var unused_features = [];
+  source.forEachFeature(function (f) {
+    if (used_feature_names.length > 0) {
+      if (used_feature_names.indexOf(f.get('name')) == -1) {
+        unused_features.push(f);
+      }
+    }
+    f.setStyle(areaStatusStyle["unknown"]);
+  });
+  unused_features.forEach(function (f) {
+    source.removeFeature(f);
+  });
+});
 
 var map = new ol.Map({
   target: #{toJSON mapId},
   layers: [
-    new ol.layer.Tile({
-      source: new ol.source.MapQuest({layer: 'osm'})
-    }),
-    new ol.layer.Vector({
-      source: new ol.source.Vector({
-        url: '/static/map-data/zones.kml',
-        format: new ol.format.KML()
-      })
-    })
+    clip_layer,
+    map_layer,
+    areas_layer
   ],
   controls: [],
   view: new ol.View({
@@ -19,3 +64,71 @@ var map = new ol.Map({
     zoom: #{toJSON zoom},
   })
 });
+
+map_layer.on('precompose', function (evt) {
+  evt.context.globalCompositeOperation = 'source-in';
+});
+
+map_layer.on('postcompose', function (evt) {
+  evt.context.globalCompositeOperation = 'source-over';
+});
+
+areaStatusStyle = {
+  okay: new ol.style.Style({
+    fill: new ol.style.Fill({color: '#3bd43d'}),
+    stroke: new ol.style.Stroke({color: '#585650', width: 4})
+  }),
+
+  bad: new ol.style.Style({
+    fill: new ol.style.Fill({color: '#e1c74d'}),
+    stroke: new ol.style.Stroke({color: '#585650', width: 4})
+  }),
+
+  worst: new ol.style.Style({
+    fill: new ol.style.Fill({color: '#e14d4d'}),
+    stroke: new ol.style.Stroke({color: '#585650', width: 4})
+  }),
+
+  unknown: new ol.style.Style({
+    fill: new ol.style.Fill({color: '#787470'}),
+    stroke: new ol.style.Stroke({color: '#585650', width: 4}),
+  })
+};
+
+
+
+function labelArea(name) {
+
+}
+
+function setAreaStyle(areaName, styleName) {
+  areas_layer.getSource().forEachFeature(function (f) {
+     var n = f.get('name');
+     if (n == areaName) {
+       f.setStyle(areaStatusStyle[styleName]);
+       return;
+     }
+  });
+}
+
+function areaNames() {
+  n = [];
+  areas_layer.getSource().forEachFeature(function (f) {
+    n.push(f.get('name'))
+  });
+  return n;
+}
+
+function zoomToClip() {
+  var e = undefined
+  clip_layer.getSource().forEachFeature(function (f) {
+    if (e === undefined)
+      e = f.getGeometry().getExtent();
+    else
+      e = ol.extent.extend(e, f.getGeometry().getExtent());
+  });
+  map.getView().fit(e, map.getSize(), {
+    padding: [30,30,30,30],
+    constrainResolution: false
+  });
+}
