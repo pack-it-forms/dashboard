@@ -11,7 +11,7 @@ div.status-okay
 div.status-bad
   h1
     font-size: 22pt
-    color: #1c74d
+    color: #e1c74d
 
 div.status-worst
   h1
