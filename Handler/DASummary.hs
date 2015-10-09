@@ -3,6 +3,7 @@
 module Handler.DASummary where
 
 import Import
+import qualified Data.List as L
 import qualified PackItForms.LADamage as LAD
 -- import System.FSNotify as FN
 
@@ -22,6 +23,7 @@ getSummaryR = do
         areamap = mapW "cityMap" (-122.09847, 37.36513, 13)
                     ("/static/map-data/zones.kml", [])
                     ("/static/map-data/zones.kml", [])
+        summaries =  L.foldr1 (>>) $ map (\zone -> $(widgetFile "zone-summary")) zones
     $(widgetFile "summary")
 
 

@@ -1,0 +1,6 @@
+<div id="zone-#{zone}-summary" .status-unknown>
+  <h1>Zone #{zone}
+  Lorem ipsum dolor<br/>
+  Lorem ipsum dolor<br/>
+  Lorem ipsum dolor<br/>
+  Lorem ipsum dolor<br/>

@@ -1,6 +1,7 @@
 div#cityMap
   width: 800px
   height: 900px
+  margin-left: 60px
   opacity: 1
 
 div#content
@@ -8,3 +9,25 @@ div#content
   margin: 0 auto
   position: relative
 
+  #zone-11-summary
+    position: absolute; top: 10px; left: 10px
+  #zone-10-summary
+    position: absolute; top: 15px; left: 440px
+  #zone-9-summary
+    position: absolute; top: 160px; left: 600px
+  #zone-8-summary
+    position: absolute; top: 300px; left: 550px
+  #zone-7-summary
+    position: absolute; top: 300px; left: 50px
+  #zone-6-summary
+    position: absolute; top: 330px; left: 750px
+  #zone-5-summary
+    position: absolute; top: 520px; left: 150px
+  #zone-4-summary
+    position: absolute; top: 580px; left: 330px
+  #zone-3-summary
+    position: absolute; top: 500px; left: 850px
+  #zone-2-summary
+    position: absolute; top: 650px; left: 800px
+  #zone-1-summary
+    position: absolute; top: 760px; left: 400px
