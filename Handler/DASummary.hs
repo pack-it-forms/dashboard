@@ -23,9 +23,19 @@ getSummaryR = do
         areamap = mapW "cityMap" (-122.09847, 37.36513, 13)
                     ("/static/map-data/zones.kml", [])
                     ("/static/map-data/zones.kml", [])
-        summaries =  L.foldr1 (>>) $ map (\zone -> $(widgetFile "zone-summary")) zones
+        summaries =  L.foldr1 (>>) $ map (zoneSummaryW zoneMapping) zones
     $(widgetFile "summary")
 
+zoneSummaryW :: LAD.ZoneMapping -> LAD.ZoneNum -> Widget
+zoneSummaryW zoneMapping zone = $(widgetFile "zone-summary")
+  where
+    zbats = fromMaybe [] $ LAD.batsOfZone zoneMapping zone
+    batbadges = L.foldr1 (>>) $ map (batBadgeW zone) zbats
+
+batBadgeW :: LAD.ZoneNum -> LAD.BATNum -> Widget
+batBadgeW zone bat = toWidget [hamlet|
+  <a href=@{BatR zone bat}>
+    <img src=@{StaticR img_status_badge_unknown_png}>|]
 
 getZoneR :: Integer -> Handler Html
 getZoneR zone = do

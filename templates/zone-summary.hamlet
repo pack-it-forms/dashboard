@@ -1,5 +1,8 @@
-<div id="zone-#{zone}-summary" .status-unknown>
-  <h1>Zone #{zone}
+<div id="zone-#{zone}-summary" .status-unknown .zone-summary>
+  <h1>
+    <a href=@{ZoneR zone}>Zone #{zone}
+  <div id="zone-#{zone}-bat-status-badges">
+    ^{batbadges}
   Lorem ipsum dolor<br/>
   Lorem ipsum dolor<br/>
   Lorem ipsum dolor<br/>

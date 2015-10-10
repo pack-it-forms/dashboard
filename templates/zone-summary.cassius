@@ -1,19 +1,21 @@
 div.status-unknown
-  h1
-    font-size: 22pt
+  h1 a
     color: #636158
 
 div.status-okay
-  h1
-    font-size: 22pt
+  h1 a
     color: #3bd43d
 
 div.status-bad
-  h1
-    font-size: 22pt
+  h1 a
     color: #e1c74d
 
 div.status-worst
+  h1 a
+    color: #e14d4d
+
+div.zone-summary
   h1
     font-size: 22pt
-    color: #e14d4d
+    margin: 0
+
