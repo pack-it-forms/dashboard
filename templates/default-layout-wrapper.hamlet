@@ -27,8 +27,6 @@ $newline never
       <header>Los Altos Damage Status
       <div id="main" role="main">
         ^{pageBody pc}
-      <footer>
-        #{appCopyright $ appSettings master}
 
     $maybe analytics <- appAnalytics $ appSettings master
       <script>
