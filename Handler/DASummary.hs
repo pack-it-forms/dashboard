@@ -35,7 +35,7 @@ zoneSummaryW zoneMapping zone = $(widgetFile "zone-summary")
 batBadgeW :: LAD.ZoneNum -> LAD.BATNum -> Widget
 batBadgeW zone bat = toWidget [hamlet|
   <a href=@{BatR zone bat}>
-    <img src=@{StaticR img_status_badge_unknown_png}>|]
+    <img src=@{StaticR img_status_badge_unknown_png} title="BAT #{bat}">|]
 
 getZoneR :: Integer -> Handler Html
 getZoneR zone = do
