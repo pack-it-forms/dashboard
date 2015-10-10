@@ -25,6 +25,10 @@ $newline never
   <body>
     <div class="container">
       <header>Los Altos Damage Status
+        <div #sysinfo>
+          <div>Server wifi: #{fromMaybe "---" wifiAddr}
+          <div>Server eth: #{fromMaybe "---" ethAddr}
+          <div>Alt+Shift+S on console to shutdown
       <div id="main" role="main">
         ^{pageBody pc}
 

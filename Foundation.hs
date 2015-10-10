@@ -4,6 +4,7 @@ import Import.NoFoundation
 import Database.Persist.Sql (ConnectionPool, runSqlPool)
 import Text.Hamlet          (hamletFile)
 import Text.Jasmine         (minifym)
+import System.Environment   (lookupEnv)
 import Yesod.Auth.BrowserId (authBrowserId)
 import Yesod.Auth.Message   (AuthMessage (InvalidLogin))
 import Yesod.Default.Util   (addStaticContentExternal)
@@ -60,6 +61,8 @@ instance Yesod App where
     defaultLayout widget = do
         master <- getYesod
         mmsg <- getMessage
+        wifiAddr <- liftIO $ lookupEnv "WIFI_ADDR"
+        ethAddr <- liftIO $ lookupEnv "ETH_ADDR"
 
         -- We break up the default layout into two components:
         -- default-layout is the contents of the body tag, and
