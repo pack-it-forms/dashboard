@@ -11,20 +11,47 @@ import qualified PackItForms.LADamage as LAD
 --             FN.watchDir mgr d (const True) print
 
 getSummaryR :: Handler Html
-getSummaryR = do
-  App {..} <- getYesod
-  let zones = LAD.zones zoneMapping
-      bats = [] :: [Integer]
-  defaultLayout $ do
+getSummaryR = defaultLayout $ do
+    App {..} <- getYesod
+    let
+      zones = LAD.zones zoneMapping
+      clipAreas = MapAreas map_data_zones_kml []
+      overlayAreas = MapAreas map_data_zones_kml []
+      areamap = mapW "cityMap" centerOfLosAltos 13 clipAreas overlayAreas
+      summaries =  L.foldr1 (>>) $ map (zoneSummaryW zoneMapping) zones
     setTitle "Los Altos Damage Status - Summary"
-    let czone = Nothing :: Maybe Integer
-        cbat = Nothing :: Maybe Integer
-        navbar = $(widgetFile "navbar")
-        areamap = mapW "cityMap" (-122.09847, 37.36513, 13)
-                    ("/static/map-data/zones.kml", [])
-                    ("/static/map-data/zones.kml", [])
-        summaries =  L.foldr1 (>>) $ map (zoneSummaryW zoneMapping) zones
+    navbarW Nothing (LAD.zones zoneMapping) Nothing []
     $(widgetFile "summary")
+
+getZoneR :: Integer -> Handler Html
+getZoneR zone = defaultLayout $ do
+    App {..} <- getYesod
+    let
+      zones = LAD.zones zoneMapping
+      bats = fromMaybe [] $ LAD.batsOfZone zoneMapping zone
+      clipAreas = MapAreas map_data_zones_kml ["Zone " ++ (show zone)]
+      overlayAreas = MapAreas map_data_bats_kml ["BAT " ++ (show b) | b <- bats]
+      areamap = mapW "zoneMap" centerOfLosAltos 13 clipAreas overlayAreas
+    setTitle $ "Los Altos Damage Status - Zone " ++ (toHtml zone)
+    navbarW (Just zone) zones Nothing bats
+    $(widgetFile "zone")
+
+getBatR :: Integer -> Integer -> Handler Html
+getBatR zone bat = defaultLayout $ do
+    App {..} <- getYesod
+    let
+      zones = LAD.zones zoneMapping
+      bats = fromMaybe [] $ LAD.batsOfZone zoneMapping zone
+      clipAreas = MapAreas map_data_bats_kml ["BAT " ++ (show bat)]
+      overlayAreas = MapAreas map_data_bats_kml ["BAT " ++ (show bat)]
+      areamap = mapW "batMap" centerOfLosAltos 13 clipAreas overlayAreas
+    setTitle $ "Los Altos Damage Status - BAT " ++ (toHtml bat)
+    navbarW (Just zone) zones (Just bat) bats
+    $(widgetFile "bat")
+
+navbarW :: Maybe LAD.ZoneNum -> [LAD.ZoneNum]
+             -> Maybe LAD.BATNum -> [LAD.BATNum] -> Widget
+navbarW czone zones cbat bats = $(widgetFile "navbar")
 
 zoneSummaryW :: LAD.ZoneMapping -> LAD.ZoneNum -> Widget
 zoneSummaryW zoneMapping zone = $(widgetFile "zone-summary")
@@ -37,44 +64,21 @@ batBadgeW zone bat = toWidget [hamlet|
   <a href=@{BatR zone bat}>
     <img src=@{StaticR img_status_badge_unknown_png} title="BAT #{bat}">|]
 
-getZoneR :: Integer -> Handler Html
-getZoneR zone = do
-  App {..} <- getYesod
-  let zones = LAD.zones zoneMapping
-      bats = fromMaybe [] $ LAD.batsOfZone zoneMapping zone
-  defaultLayout $ do
-    setTitle $ "Los Altos Damage Status - Zone " ++ (toHtml zone)
-    let czone  = Just zone
-        cbat = Nothing :: Maybe Integer
-        navbar = $(widgetFile "navbar")
-        areamap = mapW "zoneMap" (-122.09847, 37.36513, 13)
-                    ("/static/map-data/zones.kml", ["Zone " ++ (show zone)])
-                    ("/static/map-data/bats.kml", ["BAT " ++ (show b) | b <- bats])
-    $(widgetFile "zone")
-
-getBatR :: Integer -> Integer -> Handler Html
-getBatR zone bat = do
-  App {..} <- getYesod
-  let zones = LAD.zones zoneMapping
-      bats = fromMaybe [] $ LAD.batsOfZone zoneMapping zone
-  defaultLayout $ do
-    setTitle $ "Los Altos Damage Status - BAT " ++ (toHtml bat)
-    let czone = Just zone
-        cbat = Just bat
-        navbar = $(widgetFile "navbar")
-        areamap = mapW "batMap" (-122.09847, 37.36513, 13)
-                    ("/static/map-data/bats.kml", ["BAT " ++ (show bat)])
-                    ("/static/map-data/bats.kml", ["BAT " ++ (show bat)])
-    $(widgetFile "bat")
-
 type Longitude = Double
 type Lattitude = Double
+data GeoPt = GeoPt { longitude :: Longitude
+                    ,lattitude :: Lattitude }
+
+centerOfLosAltos :: GeoPt
+centerOfLosAltos = GeoPt (-122.09847) 37.36513
+
 type MapZoom = Integer
 
-mapW :: String -> (Longitude, Lattitude, MapZoom) -> (String, [String]) -> (String, [String]) -> Widget
-mapW mapId (longitude, lattitude, zoom)
-           (clip_source_kml, clip_source_features)
-           (areas_source_kml, areas_source_features) = do
+data MapAreas = MapAreas { kmlUrl :: Route Static
+                          ,areaNames :: [String] }
+
+mapW :: String -> GeoPt -> MapZoom -> MapAreas -> MapAreas -> Widget
+mapW mapId centerPt initialZoom clipAreas overlayAreas = do
   addStylesheet $ StaticR openlayers_ol_css
   addScript $ StaticR openlayers_ol_js
   $(widgetFile "map")
