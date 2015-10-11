@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <kml xmlns='http://www.opengis.net/kml/2.2'>
 	<Document>
-		<name>BATs v40</name>
+		<name>BATs v45</name>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 51</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -17,8 +17,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 61</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -31,8 +31,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 41</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -45,8 +45,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 81</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -59,8 +59,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 71</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -73,8 +73,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 91</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -87,8 +87,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 52</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -101,8 +101,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 101</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -115,8 +115,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 111</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -129,8 +129,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 53</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -143,8 +143,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 72</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -157,8 +157,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 11</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -171,8 +171,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 42</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -185,22 +185,22 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 82</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
 				<outerBoundaryIs>
 					<LinearRing>
 						<tessellate>1</tessellate>
-						<coordinates>-122.10515699999999,37.381331,0.0 -122.105146,37.3798,0.0 -122.102555,37.379549000000004,0.0 -122.10178299999998,37.380363,0.0 -122.10414300000001,37.380357999999994,0.0 -122.104105,37.381326,0.0 -122.10515699999999,37.381331,0.0</coordinates>
+						<coordinates>-122.105138,37.38493,0.0 -122.105146,37.3798,0.0 -122.102555,37.379549000000004,0.0 -122.10178299999998,37.380363,0.0 -122.10414300000001,37.380357999999994,0.0 -122.1040819,37.38130859999999,0.0 -122.10402080000001,37.38147490000001,0.0 -122.10399770000001,37.38492780000001,0.0 -122.105138,37.38493,0.0</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 92</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -213,8 +213,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 21</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -227,8 +227,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 113</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -241,8 +241,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 112</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -255,8 +255,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 95</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -269,8 +269,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 43</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -283,8 +283,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 94</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -297,8 +297,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 102</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -311,8 +311,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 83</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -325,8 +325,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 62</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -339,8 +339,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 114</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -353,8 +353,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 93</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -367,8 +367,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 31</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -381,8 +381,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 54</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -395,8 +395,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 103</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -409,8 +409,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 22</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -423,8 +423,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 63</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -437,8 +437,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 96</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -451,8 +451,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 84</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -465,8 +465,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 104</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -479,8 +479,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 115</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -493,8 +493,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 85</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -507,8 +507,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 105</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -521,8 +521,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 116</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -535,8 +535,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 23</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -549,8 +549,8 @@
 			</Polygon>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#poly-0BA9CC-2-5</styleUrl>
 			<name>BAT 97</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
 			<ExtendedData>
 			</ExtendedData>
 			<Polygon>
@@ -562,16 +562,113 @@
 				</outerBoundaryIs>
 			</Polygon>
 		</Placemark>
-		<Style id='poly-0BA9CC-2-5'>
+		<Placemark>
+			<name>BAT 24</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
+			<ExtendedData>
+			</ExtendedData>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>-122.0745474,37.3513538,0.0 -122.0761728,37.3513623,0.0 -122.0761889,37.3508208,0.0 -122.077648,37.3508122,0.0 -122.077648,37.35032819999999,0.0 -122.07621840000002,37.3503335,0.0 -122.0756512,37.3503724,0.0 -122.0751268,37.3503687,0.0 -122.07497390000002,37.3503708,0.0 -122.0749605,37.35054360000001,0.0 -122.07452060000001,37.3505436,0.0 -122.0745474,37.3513538,0.0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>BAT 117</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
+			<ExtendedData>
+			</ExtendedData>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>-122.1150541,37.3931114,0.0 -122.11583730000001,37.3931114,0.0 -122.11583730000001,37.3922441,0.0 -122.11642209999998,37.392241899999995,0.0 -122.116406,37.391722,0.0 -122.1151453,37.39171770000001,0.0 -122.1151507,37.3918242,0.0 -122.1143085,37.3918242,0.0 -122.11431919999998,37.392519,0.0 -122.1146089,37.3925147,0.0 -122.11460350000002,37.3925999,0.0 -122.1150541,37.39260420000001,0.0 -122.1150541,37.3931114,0.0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>BAT 25</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
+			<ExtendedData>
+			</ExtendedData>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>-122.0688947,37.3491523,0.0 -122.06926500000002,37.34914150000001,0.0 -122.0692501,37.3489306,0.0 -122.06919240000002,37.3484689,0.0 -122.0687069,37.348461500000006,0.0 -122.0687015,37.3481513,0.0 -122.0659643,37.348147,0.0 -122.06595279999999,37.3486233,0.0 -122.06627380000002,37.3486219,0.0 -122.06627080000001,37.3489071,0.0 -122.0680243,37.3488975,0.0 -122.06861970000001,37.349166200000006,0.0 -122.0688947,37.3491523,0.0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>BAT 64</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
+			<ExtendedData>
+			</ExtendedData>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>-122.10084920000001,37.3807464,0.0 -122.10101810000002,37.3803558,0.0 -122.1011221,37.38035690000001,0.0 -122.1013051,37.3797575,0.0 -122.1013105,37.3795742,0.0 -122.10226270000001,37.37958900000001,0.0 -122.10253359999999,37.37928,0.0 -122.10221170000001,37.3791095,0.0 -122.1021098,37.3790584,0.0 -122.101861,37.3787728,0.0 -122.10180940000001,37.3788324,0.0 -122.10168060000001,37.37883239999999,0.0 -122.10048299999998,37.378831399999996,0.0 -122.1004884,37.3786763,0.0 -122.0994014,37.3786787,0.0 -122.0983037,37.37867849999999,0.0 -122.09829369999999,37.3796307,0.0 -122.1001927,37.3796269,0.0 -122.1001947,37.38054180000001,0.0 -122.10046430000001,37.3805402,0.0 -122.10045950000001,37.3807427,0.0 -122.10062390000002,37.3807443,0.0 -122.10084920000001,37.3807464,0.0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>BAT 26</name>
+			<styleUrl>#poly-0BA9CC-2-20-nodesc</styleUrl>
+			<ExtendedData>
+			</ExtendedData>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<tessellate>1</tessellate>
+						<coordinates>-122.06656390000002,37.344522,0.0 -122.0665813,37.3423641,0.0 -122.06644180000002,37.34238109999999,0.0 -122.06637740000001,37.3416049,0.0 -122.0660985,37.3415964,0.0 -122.06607030000002,37.340885300000004,0.0 -122.0657907,37.3408841,0.0 -122.06571760000001,37.3409246,0.0 -122.06548690000001,37.3409435,0.0 -122.0650148,37.3409081,0.0 -122.06499399999998,37.3411739,0.0 -122.0649733,37.341428400000005,0.0 -122.0649629,37.34155489999999,0.0 -122.0649686,37.3416708,0.0 -122.06498,37.341912,0.0 -122.06505909999998,37.3423864,0.0 -122.0648398,37.342384300000006,0.0 -122.0649572,37.3426386,0.0 -122.06506280000002,37.3428588,0.0 -122.0652019,37.3431466,0.0 -122.0651476,37.3433204,0.0 -122.06537760000002,37.3433141,0.0 -122.06530240000001,37.3435222,0.0 -122.06524530000002,37.3436835,0.0 -122.06512449999998,37.3440113,0.0 -122.0650531,37.3443515,0.0 -122.065391,37.3444298,0.0 -122.0659281,37.3444293,0.0 -122.06613940000001,37.34453059999999,0.0 -122.06656390000002,37.344522,0.0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Style id='poly-0BA9CC-2-20-nodesc-normal'>
 			<LineStyle>
 				<color>ffCCA90B</color>
 				<width>2</width>
 			</LineStyle>
 			<PolyStyle>
-				<color> 5CCA90B</color>
+				<color>14CCA90B</color>
 				<fill>1</fill>
 				<outline>1</outline>
 			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
 		</Style>
+		<Style id='poly-0BA9CC-2-20-nodesc-highlight'>
+			<LineStyle>
+				<color>ffCCA90B</color>
+				<width>3.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>14CCA90B</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='poly-0BA9CC-2-20-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-0BA9CC-2-20-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-0BA9CC-2-20-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
 	</Document>
-</kml>
+</kml>
