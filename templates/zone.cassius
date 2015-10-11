@@ -1,4 +1,4 @@
 div#zoneMap
-  width: 800px
-  height: 900px
+  width: 400px
+  height: 450px
   opacity: 1
