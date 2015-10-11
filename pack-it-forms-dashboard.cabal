@@ -24,6 +24,7 @@ library
                      Handler.Home
                      Handler.DASummary
                      PackItForms.ZoneMappingLoader
+                     PackItForms.NetInfo
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT
@@ -77,6 +78,9 @@ library
                  , monad-logger                  >= 0.3        && < 0.4
                  , fast-logger                   >= 2.4.0      && < 2.5
                  , wai-logger                    >= 2.2        && < 2.3
+                 , network-info                  >= 0.2.0.7    && < 0.3
+                 , dns                           >= 2.0.0      && < 2.1
+                 , memoize                       >= 0.7        && < 0.8
                  , file-embed
                  , safe
                  , unordered-containers
