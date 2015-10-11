@@ -2,7 +2,6 @@ module Foundation where
 
 import Import.NoFoundation
 import Database.Persist.Sql (ConnectionPool, runSqlPool)
-import PackItForms.NetInfo
 import Text.Hamlet          (hamletFile)
 import Text.Jasmine         (minifym)
 import Yesod.Auth.BrowserId (authBrowserId)
@@ -61,7 +60,6 @@ instance Yesod App where
     defaultLayout widget = do
         master <- getYesod
         mmsg <- getMessage
-        netinfo <- liftIO getNetInfo
 
         -- We break up the default layout into two components:
         -- default-layout is the contents of the body tag, and

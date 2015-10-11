@@ -26,8 +26,6 @@ $newline never
     <div class="container">
       <header>Los Altos Damage Status
         <div #sysinfo>
-          <div>Server wifi: #{wifi netinfo}
-          <div>Server wired: #{wired netinfo}
           <div>Alt+Shift+S on console to shutdown
       <div id="main" role="main">
         ^{pageBody pc}
