@@ -5,10 +5,6 @@ module Handler.DASummary where
 import Import
 import qualified Data.List as L
 import qualified PackItForms.LADamage as LAD
--- import System.FSNotify as FN
-
--- watcher d = FN.withManager  $ \mgr -> do
---             FN.watchDir mgr d (const True) print
 
 getSummaryR :: Handler Html
 getSummaryR = defaultLayout $ do
