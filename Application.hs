@@ -28,6 +28,8 @@ import Network.Wai.Middleware.RequestLogger (Destination (Logger),
 import System.Log.FastLogger                (defaultBufSize, newStdoutLoggerSet,
                                              toLogStr)
 
+
+import qualified PackItForms.BatZoneStatuses as ZS
 import PackItForms.ZoneMappingLoader
 
 -- Import all relevant handler modules here.
@@ -55,6 +57,7 @@ makeFoundation appSettings = do
         (if appMutableStatic appSettings then staticDevel else static)
         (appStaticDir appSettings)
     zoneMapping <- loadZoneMapping
+    statuses <- ZS.initBatZoneStatuses zoneMapping >>= newTVarIO
 
     -- We need a log function to create a connection pool. We need a connection
     -- pool to create our foundation. And we need our foundation to get a

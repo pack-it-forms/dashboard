@@ -25,6 +25,7 @@ library
                      Handler.DASummary
                      PackItForms.ZoneMappingLoader
                      PackItForms.NetInfo
+                     PackItForms.BatZoneStatuses
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT
@@ -81,6 +82,8 @@ library
                  , network-info                  >= 0.2.0.7    && < 0.3
                  , dns                           >= 2.0.0      && < 2.1
                  , memoize                       >= 0.7        && < 0.8
+                 , lens                          >= 4.12       && < 4.13
+                 , stm                           >= 2.4.4      && < 2.5
                  , file-embed
                  , safe
                  , unordered-containers

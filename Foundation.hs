@@ -1,6 +1,7 @@
 module Foundation where
 
 import Import.NoFoundation
+import Control.Concurrent.STM.TVar()
 import Database.Persist.Sql (ConnectionPool, runSqlPool)
 import Text.Hamlet          (hamletFile)
 import Text.Jasmine         (minifym)
@@ -11,6 +12,7 @@ import Yesod.Core.Types     (Logger)
 import qualified Yesod.Core.Unsafe as Unsafe
 
 import qualified PackItForms.LADamage as LAD
+import qualified PackItForms.BatZoneStatuses as ZS
 
 -- | The foundation datatype for your application. This can be a good place to
 -- keep settings and values requiring initialization before your application
@@ -23,6 +25,7 @@ data App = App
     , appHttpManager :: Manager
     , appLogger      :: Logger
     , zoneMapping    :: LAD.ZoneMapping
+    , statuses       :: TVar ZS.BatZoneStatuses
     }
 
 instance HasHttpManager App where
