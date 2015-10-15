@@ -16,6 +16,7 @@ import qualified Data.Map as M
 import Import.NoFoundation hiding (Update) -- Update is a phantom type used by BATStatus
 import System.Directory
 import qualified System.FilePath as FP
+import qualified System.FSNotify as FSN
 import Data.Map()
 import Data.Either
 import Data.Either.Utils
@@ -25,11 +26,23 @@ import qualified PackItForms.MsgFmt as MF
 import qualified PackItForms.ICS213 as ICS213
 import PackItForms.LADamage
 
+import Control.Concurrent
+
 data BatZoneStatuses = BatZoneStatuses {
     zoneStatuses :: M.Map ZoneNum ZoneStatus
   , batStatuses :: M.Map BATNum (BATStatus Accumulated)
   , batStatusUpdates :: M.Map BATNum [BATStatus Update]
   } deriving (Show)
+
+watchBatZoneStatuses :: AppSettings
+                     -> ZoneMapping
+                     -> TVar BatZoneStatuses
+                     -> IO ()
+watchBatZoneStatuses a@AppSettings{appMsgsDir=amd} zm tv = do
+  FSN.withManager $ \mgr -> do
+    _ <- FSN.watchDir mgr amd (const True) updateZM
+    forever $ threadDelay 1000000000
+  where updateZM _ = initBatZoneStatuses a zm >>= atomically . writeTVar tv
 
 initBatZoneStatuses :: AppSettings -> ZoneMapping -> IO BatZoneStatuses
 initBatZoneStatuses AppSettings{appMsgsDir=amd} zm = do
