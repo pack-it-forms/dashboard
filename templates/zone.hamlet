@@ -1,1 +1,124 @@
 ^{areamap}
+
+<div #zoneSummary>
+  <h1>Zone #{zone} Status Summary
+  Last update:
+  <span #lastUpdate>none
+  , average update age:
+  <span #avgAge>none
+
+  <table>
+    <thead>
+      <tr .top>
+        <th .top>Statistic
+        <th .top .count>Count
+        <th .top colspan=2>Coverage
+    <tbody>
+      <tr .status-okay>
+        <th>Okay BATs
+        <td .right>1
+        <td .right>50%
+        <td>2 of 2
+      <tr .status-bad>
+        <th>Minor Injury
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-bad>
+        <th>Delayed Injury
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-worst>
+        <th>Immediate Injury
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-worst>
+        <th>Fatalities
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-bad>
+        <th>Missing Person
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-bad>
+        <th>Light Damage
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-bad>
+        <th>Moderate Damage
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-bad>
+        <th>Heavy Damage
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-worst>
+        <th>Fire Hazard
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-worst>
+        <th>Electric Hazard
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-worst>
+        <th>Water Hazard
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-worst>
+        <th>Gas Hazard
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-worst>
+        <th>Chemical Hazard
+        <td .right>
+        <td .right>
+        <td>
+      <tr .status-bad>
+        <th>Blocked Road
+        <td .right>
+        <td .right>
+        <td>
+
+<div #batStatuses>
+  <h1>Current Status by BAT
+  <table>
+    <thead>
+      <tr>
+        <th colspan=3>
+        <th>
+        <th colspan=6>People
+        <th colspan=3>Damage
+        <th colspan=5>Hazards
+        <th>Road
+      <tr>
+        <th>BAT
+        <th>Reports
+        <th>Age
+        <th>Okay
+        <th>Minor
+        <th>Delay
+        <th>Immediate
+        <th>Fatalities
+        <th>Missing
+        <th>Trapped
+        <th>Light
+        <th>Moderate
+        <th>Heavy
+        <th>Fire
+        <th>Electric
+        <th>Water
+        <th>Gas
+        <th>Chemical
+        <th>Blocked
+    <tbody>

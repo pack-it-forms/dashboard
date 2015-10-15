@@ -1,1 +1,86 @@
 ^{areamap}
+
+<div #batStatus>
+  <h1>BAT #{bat} Status
+  Last update:
+  <span #lastUpdate>none
+
+  <table>
+    <tbody>
+      <tr .status-okay .hidden>
+        <th>Okay
+        <td>Yes
+      <tr .status-unknown>
+        <th>Minor Injury Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Delayed Injury Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Immediate Injury Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Fatality Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Missing Person Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Light Damage Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Moderate Damage Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Heavy Damage Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Fire Hazard Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Electric Hazard Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Water Hazard Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Gas Hazard Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Chemical Hazard Count
+        <td>unknown
+      <tr .status-unknown>
+        <th>Blocked Road Count
+        <td>unknown
+
+<div #batHistory>
+  <h1 #batHistory>Report History
+  <table>
+    <thead>
+      <tr>
+        <th>
+        <th>
+        <th colspan=6>People
+        <th colspan=3>Damage
+        <th colspan=5>Hazards
+        <th>Road
+      <tr>
+        <th>Date Time
+        <th>Okay
+        <th>Minor
+        <th>Delayed
+        <th>Immediate
+        <th>Fatalities
+        <th>Missing
+        <th>Trapped
+        <th>Light
+        <th>Moderate
+        <th>Heavy
+        <th>Fire
+        <th>Electric
+        <th>Water
+        <th>Gas
+        <th>Chemical
+        <th>Blocked
+    <tbody>
+

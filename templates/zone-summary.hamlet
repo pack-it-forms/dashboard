@@ -1,9 +1,55 @@
-<div id="zone-#{zone}-summary" .status-unknown .zone-summary>
+<div id="zone-#{zone}-summary" .zone-summary>
   <h1>
-    <a href=@{ZoneR zone}>Zone #{zone}
+    <a href=@{ZoneR zone} .status-unknown>Zone #{zone}
   <div id="zone-#{zone}-bat-status-badges">
     ^{batbadges}
-  Lorem ipsum dolor<br/>
-  Lorem ipsum dolor<br/>
-  Lorem ipsum dolor<br/>
-  Lorem ipsum dolor<br/>
+    <table .zone-stats>
+      <tr>
+        <td>
+          <table>
+            <tr .status-worst>
+              <td title="Immediate Injury Count">Imm:
+              <td id="zone-#{zone}-immediate-count">
+            <tr .status-worst>
+              <td title="Fire Hazard Count">Fire:
+              <td id="zone-#{zone}-fire-count">
+            <tr .status-worst>
+              <td title="Water Hazard Count">Water:
+              <td id="zone-#{zone}-water-count">
+            <tr .status-worst>
+              <td title="Electric Hazard Count">Elec:
+              <td id="zone-#{zone}-electric-count">
+            <tr .status-bad>
+              <td title="Fatality Count">Fatal:
+              <td id="zone-#{zone}-fatality-count">
+            <tr .status-bad>
+              <td title="Delayed Injury Count">Delay:
+              <td id="zone-#{zone}-delayed-count">
+            <tr .status-bad>
+              <td title="Minor Injury Count">Minor:
+              <td id="zone-#{zone}-minor-count">
+            <tr .status-okay>
+              <td colspan=2 id="zone-#{zone}-okay">Okay
+        <td>
+          <table>
+            <tr .status-worst>
+              <td title="Gas Hazard Count">Gas:
+              <td id="zone-#{zone}-gas-count">
+            <tr .status-worst>
+              <td title="Chemical Hazard Count">Chem:
+              <td id="zone-#{zone}-chemical-count">
+            <tr .status-bad>
+              <td title="Blocked Road Count">Blk:
+              <td id="zone-#{zone}-blocked-road-count">
+            <tr .status-bad>
+              <td title="Missing Person Count">Miss:
+              <td id="zone-#{zone}-missing-count">
+            <tr .status-bad>
+              <td title="Heavy Damage Count">Heavy:
+              <td id="zone-#{zone}-heavy-count">
+            <tr .status-bad>
+              <td title="Moderate Damade Count">Mod:
+              <td id="zone-#{zone}-moderate-count">
+            <tr .status-bad>
+              <td title="Light Damage Count">Light:
+              <td id="zone-#{zone}-light-count">

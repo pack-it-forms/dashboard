@@ -27,3 +27,15 @@ div#sysinfo
     color: #9e9b8b
     border: 1px solid #121110
     background: #33322d
+
+h1,h2,h3,h4,h5,h6
+  margin-bottom: 2px
+
+.status-unknown
+  color: #636168
+.status-okay
+  color: #3bd43d
+.status-bad
+  color: #e1c74d
+.status-worst
+  color: #e14d4d

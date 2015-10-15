@@ -1,4 +1,51 @@
 div#zoneMap
-  width: 400px
-  height: 450px
+  width: 500px
+  height: 500px
   opacity: 1
+  float: left
+  margin-right: 5em
+  margin-bottom: 3ex
+
+div#zoneSummary,div#batStatuses
+  margin: 0 1em
+  table
+    tr.status-okay,tr.status-bad,tr.status-worst,tr.status-unknown
+      opacity: 0.2
+    th.top
+      text-align: center
+      opacity: 1
+    th
+      background: #21201d
+      font-weight: bolder
+      border: 1px solid #33322d
+      text-align: right
+    td
+      padding: 0 1em
+      margin: 1px
+    td.right
+      text-align: right
+
+div#zoneSummary
+  table
+    margin-top: 2ex
+    th
+      padding: 0 1em
+    th.count
+      width: 8em
+    td
+      padding: 0 1em
+
+div#batStatuses
+  clear: left
+  table
+    width: 100%
+    th
+      text-align: center
+      padding: 0 4px
+      word-wrap: break-word
+      font-size: smaller
+    td .left
+      text-align: left
+    td
+      padding: 0 4px
+      text-align: right

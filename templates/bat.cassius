@@ -1,5 +1,41 @@
 div#batMap
-  width: 300px
-  height: 325px
+  width: 400px
+  height: 450px
   opacity: 1
   float: right
+
+div#batHistory,div#batStatus
+  margin: 0 1em
+  table
+    th
+      background: #21201d
+      font-weight: bolder
+      border: 1px solid #33322d
+    td
+      margin: 1px
+
+div#batStatus
+  table
+    margin-top: 2ex
+    width: auto
+    tr.hidden
+      display: none
+    th
+      width: auto
+      text-align: right
+      padding: 0 1em
+    td
+      padding: 0 1em
+
+div#batHistory
+  clear: right
+  table
+    width: 100%
+    th
+      text-align: center
+      padding: 0 4px
+    td .left
+      text-align: left
+    td
+      padding: 0 4px
+      text-align: right

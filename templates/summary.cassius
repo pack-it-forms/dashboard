@@ -1,7 +1,7 @@
 div#cityMap
   width: 800px
   height: 900px
-  margin-left: 60px
+  margin-left: 140px
   opacity: 1
 
 div#content
@@ -10,24 +10,24 @@ div#content
   position: relative
 
   #zone-11-summary
-    position: absolute; top: 10px; left: 10px
+    position: absolute; top: 50px; left: 20px
   #zone-10-summary
-    position: absolute; top: 15px; left: 440px
+    position: absolute; top: 5px; left: 515px
   #zone-9-summary
-    position: absolute; top: 160px; left: 600px
+    position: absolute; top: 160px; left: 650px
   #zone-8-summary
-    position: absolute; top: 300px; left: 550px
+    position: absolute; top: 310px; left: 590px
   #zone-7-summary
-    position: absolute; top: 300px; left: 50px
+    position: absolute; top: 260px; left: 70px
   #zone-6-summary
-    position: absolute; top: 330px; left: 750px
+    position: absolute; top: 340px; left: 820px
   #zone-5-summary
-    position: absolute; top: 520px; left: 150px
+    position: absolute; top: 470px; left: 140px
   #zone-4-summary
-    position: absolute; top: 580px; left: 330px
+    position: absolute; top: 580px; left: 360px
   #zone-3-summary
-    position: absolute; top: 500px; left: 850px
+    position: absolute; top: 510px; left: 870px
   #zone-2-summary
-    position: absolute; top: 650px; left: 800px
+    position: absolute; top: 690px; left: 880px
   #zone-1-summary
-    position: absolute; top: 760px; left: 400px
+    position: absolute; top: 760px; left: 440px
