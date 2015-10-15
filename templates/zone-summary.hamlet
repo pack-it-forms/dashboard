@@ -1,55 +1,58 @@
 <div id="zone-#{zone}-summary" .zone-summary>
   <h1>
     <a href=@{ZoneR zone} .status-unknown>Zone #{zone}
-  <div id="zone-#{zone}-bat-status-badges">
+  <div id="zone#{zone}-bat-status-badges">
     ^{batbadges}
     <table .zone-stats>
       <tr>
         <td>
           <table>
+            <tr .status-okay>
+              <td colspan=2 id="zone#{zone}_okayCnt">Okay
             <tr .status-worst>
-              <td title="Immediate Injury Count">Imm:
-              <td id="zone-#{zone}-immediate-count">
+              <td title="Immediate Injury Count">Immed&nbsp;Injury:
+              <td id="zone#{zone}_immediateInjurySum">
             <tr .status-worst>
               <td title="Fire Hazard Count">Fire:
-              <td id="zone-#{zone}-fire-count">
+              <td id="zone#{zone}_fireSum">
             <tr .status-worst>
               <td title="Water Hazard Count">Water:
-              <td id="zone-#{zone}-water-count">
+              <td id="zone#{zone}_waterHazardSum">
             <tr .status-worst>
-              <td title="Electric Hazard Count">Elec:
-              <td id="zone-#{zone}-electric-count">
+              <td title="Electric Hazard Count">Electric:
+              <td id="zone#{zone}_electricHazardSum">
             <tr .status-bad>
-              <td title="Fatality Count">Fatal:
-              <td id="zone-#{zone}-fatality-count">
+              <td title="Fatality Count">Fatalies:
+              <td id="zone#{zone}_fatalitySum">
             <tr .status-bad>
-              <td title="Delayed Injury Count">Delay:
-              <td id="zone-#{zone}-delayed-count">
+              <td title="Delayed Injury Count">Delay&nbsp;Injury:
+              <td id="zone#{zone}_delayedInjurySum">
             <tr .status-bad>
-              <td title="Minor Injury Count">Minor:
-              <td id="zone-#{zone}-minor-count">
-            <tr .status-okay>
-              <td colspan=2 id="zone-#{zone}-okay">Okay
+              <td title="Minor Injury Count">Minor&nbsp;Injury:
+              <td id="zone#{zone}_minorInjurySum">
         <td>
           <table>
             <tr .status-worst>
               <td title="Gas Hazard Count">Gas:
-              <td id="zone-#{zone}-gas-count">
+              <td id="zone#{zone}_gasHazardSum">
             <tr .status-worst>
-              <td title="Chemical Hazard Count">Chem:
-              <td id="zone-#{zone}-chemical-count">
+              <td title="Chemical Hazard Count">Chemical:
+              <td id="zone#{zone}_chemicalHazardSum">
             <tr .status-bad>
-              <td title="Blocked Road Count">Blk:
-              <td id="zone-#{zone}-blocked-road-count">
+              <td title="Trapped Person Count">Trapped:
+              <td id="zone#{zone}_trappedSum">
             <tr .status-bad>
-              <td title="Missing Person Count">Miss:
-              <td id="zone-#{zone}-missing-count">
+              <td title="Blocked Road Count">Road Blkd:
+              <td id="zone#{zone}_roadBlockedCnt">
             <tr .status-bad>
-              <td title="Heavy Damage Count">Heavy:
-              <td id="zone-#{zone}-heavy-count">
+              <td title="Missing Person Count">Missing:
+              <td id="zone#{zone}_missingSum">
             <tr .status-bad>
-              <td title="Moderate Damade Count">Mod:
-              <td id="zone-#{zone}-moderate-count">
+              <td title="Heavy Damage Count">Heavy&nbsp;Dmg:
+              <td id="zone#{zone}_heavyDamageSum">
             <tr .status-bad>
-              <td title="Light Damage Count">Light:
-              <td id="zone-#{zone}-light-count">
+              <td title="Moderate Damage Count">Mod&nbsp;Dmg:
+              <td id="zone#{zone}_moderateDamageSum">
+            <tr .status-bad>
+              <td title="Light Damage Count">Light&nbsp;Dmg:
+              <td id="zone#{zone}_lightDamageSum">
