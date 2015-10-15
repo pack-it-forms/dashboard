@@ -52,6 +52,9 @@ data AppSettings = AppSettings
     -- ^ Copyright text to appear in the footer of the page
     , appAnalytics              :: Maybe Text
     -- ^ Google Analytics code
+
+    -- The directory to watch for msgs
+    , appMsgsDir                :: String
     }
 
 instance FromJSON AppSettings where
@@ -77,6 +80,8 @@ instance FromJSON AppSettings where
 
         appCopyright              <- o .: "copyright"
         appAnalytics              <- o .:? "analytics"
+
+        appMsgsDir                <- o .: "msgs-dir"
 
         return AppSettings {..}
 

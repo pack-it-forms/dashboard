@@ -21,5 +21,7 @@ database:
   database: "_env:SQLITE_DATABASE:pack-it-forms-dashboard.sqlite3"
   poolsize: "_env:SQLITE_POOLSIZE:10"
 
+msgs-dir: "_env:MSGS_DIR:msgs"
+
 copyright: Copyright (c) 2015 Keith Amidon, Peter Amidon
 #analytics: UA-YOURCODE

@@ -4,5 +4,5 @@ import Handler.DASummary
 import Import
 import Yesod()
 
-getHomeR :: Handler Html
+getHomeR :: Handler TypedContent
 getHomeR = getSummaryR
