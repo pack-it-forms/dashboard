@@ -1,0 +1,92 @@
+
+var summary_fields = [
+    "_okayCnt",
+    "_immediateInjurySum",
+    "_fireSum",
+    "_waterHazardSum",
+    "_electricHazardSum",
+    "_fatalitySum",
+    "_delayedInjurySum",
+    "_minorInjurySum",
+    "_gasHazardSum",
+    "_chemicalHazardSum",
+    "_trappedSum",
+    "_roadBlockedCnt",
+    "_missingSum",
+    "_heavyDamageSum",
+    "_moderateDamageSum",
+    "_lightDamageSum"
+];
+
+function display_zone_summary(data) {
+    console.log(data)
+    var zone = data["number"];
+    var summary = data["summary"];
+    var batcnt = summary["_numBATs"];
+    var nreporting_max = 0;
+    var worst_cnt = 0;
+    var bad_cnt = 0;
+    var okay_cnt = 0;
+    summary_fields.forEach(function (f) {
+        var stat = summary[f]["value"];
+        var reports = summary[f]["nReportingBats"];
+        var stat_cell = document.querySelector("#zone" + zone + f);
+        var stat_row = stat_cell.parentNode;
+        if (f == "_okayCnt") {
+            okay_cnt = stat
+            if (okay_cnt == batcnt) {
+               stat_row.style.display = "table-row";
+            } else {
+               stat_row.style.display = "none";
+            }
+        } else {
+            stat_cell.textContent = stat;
+            if (stat == 0) {
+                stat_row.style.display = "none";
+            } else {
+                stat_row.style.display = "table-row";
+                if (stat_row.classList.contains("status-worst")) {
+                    worst_cnt += 1;
+                } else {
+                    bad_cnt += 1;
+                }
+            }
+        }
+        if (nreporting_max < reports) {
+            nreporting_max = reports;
+        }
+    });
+    if (nreporting_max == 0) {
+        display_zone_status_as(zone, "unknown");
+    } else if (okay_cnt > 0 && worst_cnt == 0 && bad_cnt == 0) {
+        display_zone_status_as(zone, "okay");
+    } else if (worst_cnt > 0) {
+        display_zone_status_as(zone, "worst");
+    } else {
+        display_zone_status_as(zone, "bad");
+    }
+}
+
+function display_zone_status_as(zone, status) {
+    var title_elem = document.querySelector("#zone-" + zone + "-summary h1 a");
+    title_elem.className = "status-" + status;
+    setAreaStyle("Zone " + zone, status);
+}
+
+function max_reporting_bats(summary) {
+   var m = 0
+   summary_fields.forEach(function (f) {
+     var c = summary[f]["nReportingBats"];
+     if (c > m)
+       m = c;
+   });
+   return m;
+}
+
+function has_no_reports(summary) {
+    return max_reporting_bats(summary) == 0;
+}
+
+function all_okay(summary) {
+    return summary["okayCnt"]["value"] == summary["_numBATs"];
+}
