@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z "$1" ] || [ "$1" == "/usr/local/bin/dashboard" ]; then
+   shift
+   cd /var/www && exec /usr/local/bin/pack-it-forms-dashboard "$@"
+else
+   exec "$@"
+fi
