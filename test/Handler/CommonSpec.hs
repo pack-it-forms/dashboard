@@ -1,5 +1,6 @@
-module Handler.CommonSpec (spec) where
+module Handler.CommonSpec () where
 
+{--
 import TestImport
 
 spec :: Spec
@@ -15,3 +16,4 @@ spec = withApp $ do
         it "gives a 200" $ do
             get FaviconR
             statusIs 200
+--}
