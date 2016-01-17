@@ -1,0 +1,24 @@
+flags:
+  pack-it-forms-dashboard:
+    library-only: false
+    dev: false
+packages:
+- "."
+- location:
+    git: https://github.com/pack-it-forms/msgfmt.git
+    commit: 07a388e42f0b9dc91be69eaf0e26d4ca6b9c1955
+- location:
+    git: https://github.com/peter-sa/sdtpl.git
+    commit: 58464aadffa3216e1bdda2f6378d72adb9214d84
+extra-deps: []
+resolver: lts-4.1
+docker:
+    enable: true
+    repo: "fpco/stack-build"
+image:
+  container:
+      name: pack-it-forms-dashboard-webapp
+      base: "fpco/stack-run"
+      add:
+        config: /var/www/config
+        static: /var/www/static
