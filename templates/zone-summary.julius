@@ -89,3 +89,27 @@ function has_no_reports(summary) {
 function all_okay(summary) {
     return summary["okayCnt"]["value"] == summary["_numBATs"];
 }
+
+function update_zone_summaries() {
+    json_async_request("/", handle_zone_summary_response, handle_error);
+}
+
+function handle_zone_summary_response(c) {
+    c[0].forEach(function (z) {
+        display_zone_summary(z);
+    });
+    window.setTimeout(update_zone_summaries, 5000);
+}
+
+function handle_error(e) {
+    console.log("Error in zone summary status request:", e)
+}
+
+function start_zone_summaries_updates(next) {
+      update_zone_summaries();
+      next();
+}
+
+if (startup_functions.indexOf(start_zone_summaries_updates) == -1) {
+   startup_functions.push(start_zone_summaries_updates);
+}

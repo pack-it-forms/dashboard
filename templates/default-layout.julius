@@ -1,0 +1,44 @@
+/* Startup scheme stolen from pack-it-forms */
+
+/* --- Registration for code to run after page loads
+
+Registered startup functions are the initial entry points for
+execution after the page loads.  This implements the mechanism, the
+calls registering startup functions are located in the julius files
+for widgets that need code to execute on startup. */
+
+function startup() {
+    /* The startup functions are called in continuation-passing style,
+    so that they can contain asynchronous code that moves to the next
+    function when it is complete. */
+    startup_functions.shift()(callclist(startup_functions));
+
+    function callclist(functions) {
+        return function() {
+            if (functions.length > 0) {
+                functions.shift()(callclist(functions))
+            }
+        }
+    }
+}
+
+window.onload=startup;
+
+
+/* --- Simple async load to reduce boilerplate */
+function json_async_request(url, cb, err) {
+    var request;
+    request = new XMLHttpRequest();
+    request.open("GET", url, true);
+    request.setRequestHeader("Accept", "application/json");
+    request.onreadystatechange = function callcb(e) {
+        if (e.target.readyState == e.target.DONE) {
+            if (e.target.response) {
+                cb(eval(e.target.response));
+            } else {
+                err();
+            }
+        }
+    };
+    request.send();
+}
