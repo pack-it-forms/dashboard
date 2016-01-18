@@ -19,7 +19,6 @@ var summary_fields = [
 ];
 
 function display_zone_summary(data) {
-    console.log(data)
     var zone = data["number"];
     var summary = data["summary"];
     var batcnt = summary["_numBATs"];
