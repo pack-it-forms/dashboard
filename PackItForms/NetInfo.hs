@@ -7,7 +7,7 @@ import Import.NoFoundation
 
 import qualified Data.ByteString.Char8 as B8
 import Data.Function.Memoize (memoize, Memoizable(..), memoizeFinite)
-import Data.List (init)
+import Data.List as L
 import Network.Info
 import Network.DNS.Lookup
 import Network.DNS.Resolver
@@ -43,14 +43,14 @@ intfInfo i = do
             Nothing -> return Nothing
             Just a -> lookupName a
   case (name, ipaddr) of
-    (Just n, Just a) -> return $ mconcat [(init n), " (", (show a), ")"]
+    (Just n, Just a) -> return $ mconcat [(L.init n), " (", (show a), ")"]
     (Nothing, Just a) -> return (show a)
     _ -> return "---"
 
 intfIPAddr :: IntfName -> IO (Maybe IPv4Addr)
 intfIPAddr i = do
   intfs <- getNetworkInterfaces
-  return $ IPv4Addr . ipv4 <$> find (\e -> name e == i) intfs
+  return $ IPv4Addr . ipv4 <$> L.find (\e -> name e == i) intfs
 
 lookupName :: IPv4Addr -> IO (Maybe String)
 lookupName = memoize lookupName'

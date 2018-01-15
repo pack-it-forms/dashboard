@@ -18,15 +18,13 @@ import System.Directory
 import qualified System.FilePath as FP
 import qualified System.FSNotify as FSN
 import Data.Map()
-import Data.Either
+import Data.Either hiding (fromRight)
 import Data.Either.Utils
 import Control.Lens
 
 import qualified PackItForms.MsgFmt as MF
 import qualified PackItForms.ICS213 as ICS213
 import PackItForms.LADamage
-
-import Control.Concurrent
 
 data BatZoneStatuses = BatZoneStatuses {
     zoneStatuses :: M.Map ZoneNum ZoneStatus
