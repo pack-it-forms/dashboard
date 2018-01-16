@@ -10,11 +10,13 @@ self: super:
     fetch = super.nixpkgs.fetchFromGitHub;
   } { config = {}; };
 
-  pack-it-forms-msgfmt = self.releaseGHDevLocal {
-    owner = "pack-it-forms";
-    repo = "msgfmt";
-    rev = "TODO";
-    sha256 = "TODO";
-    local = ../pack-it-forms-msgfmt;
+  hsExtraDeps = {
+    pack-it-forms-msgfmt = self.releaseGHDevLocal {
+      owner = "pack-it-forms";
+      repo = "msgfmt";
+      rev = "TODO";
+      sha256 = "TODO";
+      local = ../pack-it-forms-msgfmt;
+    };
   };
 }
